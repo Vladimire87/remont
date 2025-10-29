@@ -3,21 +3,23 @@ import { Container, Section, Card, Button } from "@/components/primitives";
 import { fx } from "@/lib/motion";
 import { Camera, ArrowRight } from "lucide-react";
 
+const base = import.meta.env.BASE_URL;
+
 const projects = [
   {
     name: "ЖК «Лицеист» · 112 м²",
     duration: "10 недель",
-    image: "/images/portfolio-1.jpg"
+    image: `${base}images/portfolio-1.jpg`
   },
   {
     name: "БЦ «Арт Плей» · 86 м²",
     duration: "8 недель",
-    image: "/images/portfolio-2.jpg"
+    image: `${base}images/portfolio-2.jpg`
   },
   {
     name: "ЖК «Симфония» · 134 м²",
     duration: "12 недель",
-    image: "/images/portfolio-3.jpg"
+    image: `${base}images/portfolio-3.jpg`
   }
 ];
 
