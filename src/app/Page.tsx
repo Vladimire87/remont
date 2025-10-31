@@ -7,7 +7,7 @@ import Process from "@/components/Process";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
-import { Container } from "@/components/primitives";
+import Footer from "@/components/Footer";
 
 export default function Page() {
   return (
@@ -21,11 +21,7 @@ export default function Page() {
       <Pricing />
       <FAQ />
       <Contact />
-      <footer className="border-t border-border">
-        <Container className="py-10 text-xs text-muted">
-          © {new Date().getFullYear()} Forma Renovation
-        </Container>
-      </footer>
+      <Footer />
     </div>
   );
 }

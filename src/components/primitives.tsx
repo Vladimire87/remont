@@ -24,11 +24,11 @@ export const Card = ({ className = "", children }: BaseProps) => (
 type BtnProps = ButtonHTMLAttributes<HTMLButtonElement> & { variant?: "primary" | "ghost" | "outline" };
 export const Button = ({ className = "", variant = "primary", ...props }: BtnProps) => {
   const base =
-    "inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition active:translate-y-[1px]";
+    "inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold transition-all active:translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2";
   const variants = {
-    primary: "bg-brand-600 text-white shadow-lg ring-1 ring-brand-700/30 hover:brightness-105",
-    ghost: "bg-white border border-border text-text hover:bg-surface",
-    outline: "bg-transparent border border-border text-text hover:bg-white"
+    primary: "bg-brand-600 text-white shadow-lg hover:bg-brand-700 hover:shadow-xl",
+    ghost: "bg-white border border-border text-text hover:bg-surface hover:shadow-md",
+    outline: "bg-transparent border border-border text-text hover:bg-white hover:shadow-md"
   } as const;
   return <button className={cn(base, variants[variant], className)} {...props} />;
 };
